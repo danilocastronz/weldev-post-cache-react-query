@@ -1,13 +1,24 @@
 {
   "name": "weldev-post-cache-react-query",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "author": {
+    "name": "Dan Castro"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danilocastronz/weldev-post-cache-react-query.git"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.8.1",
+    "@emotion/styled": "^11.8.1",
+    "@mui/material": "^5.5.0",
+    "@mui/x-data-grid": "^5.6.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },

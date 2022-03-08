@@ -1,45 +1,40 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import styled from "@emotion/styled";
+
+import { Grid } from "./components/Grid";
+import { Menu } from "./components/Menu";
+import { Title } from "./components/Title";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
+    <AppWrapper>
+      <header>
+        <Title />
       </header>
-    </div>
-  )
+      <MainWrapper>
+        <Menu />
+        <Grid />
+      </MainWrapper>
+    </AppWrapper>
+  );
 }
 
-export default App
+const AppWrapper = styled("div")`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #fffafa;
+`;
+
+const MainWrapper = styled("main")`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  margin: 20px 0;
+`;
+
+export default App;
