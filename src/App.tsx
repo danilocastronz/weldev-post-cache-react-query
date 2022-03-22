@@ -1,20 +1,25 @@
 import styled from "@emotion/styled";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { ReactQueryDevtools } from "react-query/devtools";
 
 import { Grid } from "./components/Grid";
-import { Menu } from "./components/Menu";
 import { Title } from "./components/Title";
+
+const client = new QueryClient();
 
 function App() {
   return (
-    <AppWrapper>
-      <header>
-        <Title />
-      </header>
-      <MainWrapper>
-        <Menu />
-        <Grid />
-      </MainWrapper>
-    </AppWrapper>
+    <QueryClientProvider client={client}>
+      <AppWrapper>
+        <header>
+          <Title />
+        </header>
+        <MainWrapper>
+          <Grid />
+        </MainWrapper>
+      </AppWrapper>
+      <ReactQueryDevtools />
+    </QueryClientProvider>
   );
 }
 
