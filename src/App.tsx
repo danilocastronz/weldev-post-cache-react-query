@@ -1,7 +1,6 @@
 import styled from "@emotion/styled";
 
 import { Grid } from "./components/Grid";
-import { Menu } from "./components/Menu";
 import { Title } from "./components/Title";
 
 function App() {
@@ -11,7 +10,6 @@ function App() {
         <Title />
       </header>
       <MainWrapper>
-        <Menu />
         <Grid />
       </MainWrapper>
     </AppWrapper>
